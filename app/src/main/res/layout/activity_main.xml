@@ -83,18 +83,42 @@
             android:gravity="center"
             android:textStyle="bold"
             android:text="수입/지출 상세 확인" />
+
+        <Button
+            android:id="@+id/intentButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#7DB97F"
+            android:gravity="center"
+            android:text="DBview"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/DBdeleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="#7DB97F"
+            android:gravity="center"
+            android:text="DBdelete"
+            android:textSize="20dp"
+            android:textStyle="bold" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="bottom">
         <ImageButton
+            android:id="@+id/AddButton"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_gravity="end"
