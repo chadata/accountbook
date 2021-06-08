@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     IncomeDBManager incomeDBManager = new IncomeDBManager(MainActivity.this);
                     SQLiteDatabase database1 = incomeDBManager.getReadableDatabase();
-                    Cursor cursor = database1.rawQuery("SELECT * FROM Income", null);
+                    Cursor cursor = database1.rawQuery("SELECT * FROM Income order by year desc, month desc, day desc, money desc", null);
                     while (cursor.moveToNext()) {
                         year = cursor.getInt(cursor.getColumnIndex("year"));
                         month = cursor.getInt(cursor.getColumnIndex("month"));
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     OutcomeDBManager outcomeDBManager = new OutcomeDBManager(MainActivity.this);
                     SQLiteDatabase database2 = outcomeDBManager.getReadableDatabase();
-                    cursor = database2.rawQuery("SELECT * FROM Outcome", null);
+                    cursor = database2.rawQuery("SELECT * FROM Outcome order by year desc, month desc, day desc, money desc", null);
                     while (cursor.moveToNext()) {
                         year = cursor.getInt(cursor.getColumnIndex("year"));
                         month = cursor.getInt(cursor.getColumnIndex("month"));
